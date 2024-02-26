@@ -17,8 +17,6 @@ const mruczenia = [
 function obslugaKlikniecia(kot) {
     // Usunięcie kotka
     kot.remove();
-    // Wygenerowanie nowego kotka
-    generujKotaLosowo();
 }
 
 // Funkcja generująca koty na stronie
@@ -46,8 +44,10 @@ function generujKotaLosowo() {
         audio.onloadedmetadata = function() {
             audio.play();
         };
-        // Obsługa ponownego kliknięcia na kotka - usuwanie i generowanie nowego kotka
+        // Obsługa ponownego kliknięcia na kotka - usuwanie kotka
         obslugaKlikniecia(kot);
+        // Wygenerowanie nowego kotka
+        generujKotaLosowo();
     });
     document.body.appendChild(kot);
 }
