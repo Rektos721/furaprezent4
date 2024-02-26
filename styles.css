@@ -1,11 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url("tlo.jpg"); /* Podaj ścieżkę do swojego obrazka */
-    background-size: cover; /* Dopasowanie obrazka do rozmiaru okna przeglądarki */
+    background-size: 100% 100%; /* Dopasowanie obrazka do rozmiaru okna przeglądarki */
     background-repeat: no-repeat; /* Wyłączenie powtarzania obrazka */
     background-attachment: fixed;
-    height: 100vh;
-    width: auto;
 }
 
 .container {
