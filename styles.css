@@ -13,7 +13,7 @@ body {
     margin: 10px;
     cursor: pointer;
 }
-html, body {
+{
     width: 800px; /* Szerokość 800 pikseli */
     height: 600px; /* Wysokość 600 pikseli */
     margin: 0;
