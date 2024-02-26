@@ -22,12 +22,22 @@ const mruczenia = [
     // Dodaj więcej ścieżek dźwięków, jeśli potrzebujesz
 ];
 
-// Funkcja obsługująca kliknięcie na kotka
+/ Funkcja obsługująca kliknięcie na kotka
 function obslugaKlikniecia(kot, pozycja) {
-    // Usunięcie kotka
-    kot.remove();
-    // Wygenerowanie nowego kotka
-    generujKotaLosowo();
+    // Zmiana rozmiaru kotka na pierwotny
+    kot.style.width = '2%';
+    kot.style.height = '2%';
+    kot.style.left = pozycja.x + 'px';
+    kot.style.top = pozycja.y + 'px';
+    kot.style.zIndex = 'initial';
+}
+// Funkcja generująca losową pozycję na stronie
+function losowaPozycja() {
+    const szerokoscEkranu = window.innerWidth;
+    const wysokoscEkranu = window.innerHeight;
+    const x = Math.floor(Math.random() * (szerokoscEkranu - 200)); // 200 to szerokość obrazu kotka
+    const y = Math.floor(Math.random() * (wysokoscEkranu - 200)); // 200 to wysokość obrazu kotka
+    return { x, y };
 }
 
 // Funkcja generująca koty na stronie
@@ -45,7 +55,7 @@ function generujKotaLosowo() {
     kot.addEventListener('click', function() {
         // Zmiana rozmiaru kotka na pełen ekran
         kot.style.width = '100%';
-        kot.style.height = 'auto'; // ustaw na auto, aby zachować proporcje obrazu
+        kot.style.height = '800px'; // ustaw na auto, aby zachować proporcje obrazu
         kot.style.left = '0';
         kot.style.top = '0';
         kot.style.zIndex = '9999';
@@ -55,7 +65,7 @@ function generujKotaLosowo() {
         audio.onloadedmetadata = function() {
             audio.play();
         };
-        // Obsługa ponownego kliknięcia na kotka - usuwanie i generowanie nowego kotka
+        // Obsługa ponownego kliknięcia na kotka - przywrócenie pierwotnych rozmiarów
         kot.addEventListener('click', function() {
             obslugaKlikniecia(kot, pozycja);
         }, { once: true }); // Wywołaj raz i usuń nasłuchiwanie
