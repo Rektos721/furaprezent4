@@ -3,12 +3,12 @@ const koty = [
     'images/kot1.jpg',
     'images/kot2.jpg',
     'images/kot3.jpg',
-    'images/kot4.jpg',
-    'images/kot5.jpg',
-    'images/kot6.jpg',
-    'images/kot7.jpg',
-    'images/kot8.jpg',
-    'images/kot9.jpg',
+    //'images/kot4.jpg',
+   // 'images/kot5.jpg',
+   // 'images/kot6.jpg',
+    //'images/kot7.jpg',
+    //'images/kot8.jpg',
+    //'images/kot9.jpg',
 ];
 
 // Lista dostępnych ścieżek dźwięków mruczenia
@@ -16,9 +16,9 @@ const mruczenia = [
     'audio/mruczenie1.mp3',
     'audio/mruczenie2.mp3',
     'audio/mruczenie3.mp3',
-    'audio/mruczenie4.mp3',
-    'audio/mruczenie5.mp3',
-    'audio/mruczenie6.mp3',
+    //'audio/mruczenie4.mp3',
+    //'audio/mruczenie5.mp3',
+    //'audio/mruczenie6.mp3',
     // Dodaj więcej ścieżek dźwięków, jeśli potrzebujesz
 ];
 
