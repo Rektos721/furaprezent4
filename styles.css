@@ -3,8 +3,9 @@ body {
     background-image: url("tlo.jpg"); /* Podaj ścieżkę do swojego obrazka */
     background-size: cover; /* Dopasowanie obrazka do rozmiaru okna przeglądarki */
     background-repeat: no-repeat; /* Wyłączenie powtarzania obrazka */
+    background-attachment: fixed;
     height: 100vh;
-    width: 100vh;
+    width: auto;
 }
 
 .container {
