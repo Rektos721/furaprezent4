@@ -7,7 +7,7 @@ body, html {
 
 /* Ustawienie tła */
 body {
-    background-image: url('sciezka/do/tla.jpg');
+    background-image: url('tlo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
