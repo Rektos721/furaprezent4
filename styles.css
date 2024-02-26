@@ -7,9 +7,10 @@ body, html {
 
 /* Ustawienie tła */
 body {
-    background-image: url('tlo.jpg');
+    background-image: url('sciezka/do/tla.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Ustawienie stylu dla kontenera */
