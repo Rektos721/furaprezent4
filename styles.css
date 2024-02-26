@@ -14,8 +14,7 @@ body {
     cursor: pointer;
 }
 {
-    width: 800px; /* Szerokość 800 pikseli */
-    height: 600px; /* Wysokość 600 pikseli */
-    margin: 0;
-    padding: 0;
+    background-image: url('sciezka/do/tla.jpg'); /* Podaj ścieżkę do swojego obrazka */
+    background-size: cover; /* Dopasowanie obrazka do rozmiaru okna przeglądarki */
+    background-repeat: no-repeat; /* Wyłączenie powtarzania obrazka */
 }
