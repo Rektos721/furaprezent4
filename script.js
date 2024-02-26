@@ -10,13 +10,14 @@ const mruczenia = [
     'audio/mruczenie1.mp3',
     'audio/mruczenie2.mp3',
     'audio/mruczenie3.mp3',
-
 ];
 
 // Funkcja obsługująca kliknięcie na kotka
 function obslugaKlikniecia(kot) {
     // Usunięcie kotka
     kot.remove();
+    // Wygenerowanie nowego kotka
+    generujKotaLosowo();
 }
 
 // Funkcja generująca koty na stronie
@@ -44,12 +45,19 @@ function generujKotaLosowo() {
         audio.onloadedmetadata = function() {
             audio.play();
         };
-        // Obsługa ponownego kliknięcia na kotka - usuwanie kotka
+        // Obsługa ponownego kliknięcia na kotka - usuwanie i generowanie nowego kotka
         obslugaKlikniecia(kot);
-        // Wygenerowanie nowego kotka
-        generujKotaLosowo();
     });
     document.body.appendChild(kot);
+}
+
+// Funkcja generująca losową pozycję na stronie
+function losowaPozycja() {
+    const szerokoscEkranu = window.innerWidth;
+    const wysokoscEkranu = window.innerHeight;
+    const x = Math.floor(Math.random() * (szerokoscEkranu - 200)); // 200 to szerokość obrazu kotka
+    const y = Math.floor(Math.random() * (wysokoscEkranu - 200)); // 200 to wysokość obrazu kotka
+    return { x, y };
 }
 
 // Wywołaj funkcję generującą koty na stronie
