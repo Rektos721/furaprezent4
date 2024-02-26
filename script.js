@@ -17,8 +17,8 @@ const mruczenia = [
 // Funkcja obsługująca kliknięcie na kotka
 function obslugaKlikniecia(kot, pozycja) {
     // Zmiana rozmiaru kotka na pierwotny
-    kot.style.width = '1px';
-    kot.style.height = 'auto';
+    kot.style.width = '1%';
+    kot.style.height = '1%';
     kot.style.left = pozycja.x + 'px';
     kot.style.top = pozycja.y + 'px';
     kot.style.zIndex = 'initial';
