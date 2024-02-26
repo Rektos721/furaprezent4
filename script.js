@@ -3,7 +3,12 @@ const koty = [
     'images/kot1.jpg',
     'images/kot2.jpg',
     'images/kot3.jpg',
-    // Dodaj więcej nazw plików, jeśli potrzebujesz
+    'images/kot4.jpg',
+    'images/kot5.jpg',
+    'images/kot6.jpg',
+    'images/kot7.jpg',
+    'images/kot8.jpg',
+    'images/kot9.jpg',
 ];
 
 // Lista dostępnych ścieżek dźwięków mruczenia
@@ -11,14 +16,17 @@ const mruczenia = [
     'audio/mruczenie1.mp3',
     'audio/mruczenie2.mp3',
     'audio/mruczenie3.mp3',
+    'audio/mruczenie4.mp3',
+    'audio/mruczenie5.mp3',
+    'audio/mruczenie6.mp3',
     // Dodaj więcej ścieżek dźwięków, jeśli potrzebujesz
 ];
 
 // Funkcja obsługująca kliknięcie na kotka
 function obslugaKlikniecia(kot, pozycja) {
     // Zmiana rozmiaru kotka na pierwotny
-    kot.style.width = '1%';
-    kot.style.height = '1%';
+    kot.style.width = '2%';
+    kot.style.height = '2%';
     kot.style.left = pozycja.x + 'px';
     kot.style.top = pozycja.y + 'px';
     kot.style.zIndex = 'initial';
@@ -41,7 +49,7 @@ function generujKotaLosowo() {
     kot.style.position = 'absolute';
     kot.style.left = pozycja.x + 'px';
     kot.style.top = pozycja.y + 'px';
-    kot.style.width = '2%'; // Możesz dostosować rozmiar obrazu, jeśli chcesz
+    kot.style.width = '4%'; // Możesz dostosować rozmiar obrazu, jeśli chcesz
     kot.style.height = 'auto';
     kot.style.cursor = 'pointer'; // Kursor wskazujący na możliwość interakcji z kotem
     kot.addEventListener('click', function() {
@@ -63,6 +71,7 @@ function generujKotaLosowo() {
         }, { once: true }); // Wywołaj raz i usuń nasłuchiwanie
     });
     document.body.appendChild(kot);
+    generujKotaLosowo();
 }
 
 // Wywołaj funkcję generującą koty na stronie
