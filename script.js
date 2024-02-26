@@ -17,7 +17,7 @@ const mruczenia = [
 // Funkcja obsługująca kliknięcie na kotka
 function obslugaKlikniecia(kot, pozycja) {
     // Zmiana rozmiaru kotka na pierwotny
-    kot.style.width = '50px';
+    kot.style.width = '20px';
     kot.style.height = 'auto';
     kot.style.left = pozycja.x + 'px';
     kot.style.top = pozycja.y + 'px';
@@ -47,7 +47,7 @@ function generujKotaLosowo() {
     kot.addEventListener('click', function() {
         // Zmiana rozmiaru kotka na pełen ekran
         kot.style.width = '100%';
-        kot.style.height = 'auto'; // ustaw na auto, aby zachować proporcje obrazu
+        kot.style.height = '800px'; // ustaw na auto, aby zachować proporcje obrazu
         kot.style.left = '0';
         kot.style.top = '0';
         kot.style.zIndex = '9999';
