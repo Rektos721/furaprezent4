@@ -41,7 +41,7 @@ function generujKotaLosowo() {
     kot.style.position = 'absolute';
     kot.style.left = pozycja.x + 'px';
     kot.style.top = pozycja.y + 'px';
-    kot.style.width = '50px'; // Możesz dostosować rozmiar obrazu, jeśli chcesz
+    kot.style.width = '2%'; // Możesz dostosować rozmiar obrazu, jeśli chcesz
     kot.style.height = 'auto';
     kot.style.cursor = 'pointer'; // Kursor wskazujący na możliwość interakcji z kotem
     kot.addEventListener('click', function() {
